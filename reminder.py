@@ -13,7 +13,7 @@ if file_name == '' or sheet.endswith("Sheet"):
 # Readin the excel file
 try:
     df = read_excel(file_name, sheet_name=sheet)
-except:
+except FileNotFoundError:
     # Raising a file not found error
     raise FileNotFoundError("The file doesn't found")
 
