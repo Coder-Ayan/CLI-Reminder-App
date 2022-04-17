@@ -15,7 +15,7 @@ try:
     df = read_excel(file_name, sheet_name=sheet)
 except FileNotFoundError:
     # Raising a file not found error
-    raise FileNotFoundError("The file doesn't found")
+    raise FileNotFoundError("The file couldn't found")
 
 today_schedule = []
 no_of_rows = len(df.index)
